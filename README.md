@@ -24,12 +24,12 @@ This mini-project demonstrates data aggregation and visualization using **MongoD
 .
 ├── visualizations/          # All plots
 ├── .gitignore            
+├── README.md
 ├── charts.py                # Code for all plots
 ├── listingsAndReviews.json  # Original JSON data plugged into MongoDB
 ├── load_data.py             # Load data from MongoDB
 ├── main.py                  # Entry point: connects to DB and generates plots
 ├── pymongo_queries.py       # MongoDB aggregation queries
-├── README.md
 └── requirements.txt         # Python dependencies
 ```
 
