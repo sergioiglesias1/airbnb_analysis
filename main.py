@@ -9,7 +9,6 @@ def main():
         db = client["Airbnb"]
         collection = db["airbnb_db"]
         count = collection.count_documents({})
-        print(f"Connected to 'Airbnb' database, 'airbnb_db' collection.")
         print(f"Total documents: {count}")
     except Exception as e:
         print(f"Error connecting to database: {e}")
