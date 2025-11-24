@@ -20,7 +20,7 @@ This mini-project demonstrates data aggregation and visualization using **MongoD
 
 ## Why MongoDB instead of SQL?
 
-* The Airbnb data is unstructured and contains many nested fields, which fits MongoDB’s better than a structural query language (SQL).
+* The Airbnb data is semi-structured and contains many nested fields, which fits MongoDB’s better than a structural query language (SQL).
 * MongoDB allows to store the data in its original form without designing a rigid schema.
 * This approach makes the exploratory part of the work faster and more flexible.
 
