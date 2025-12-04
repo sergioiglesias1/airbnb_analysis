@@ -3,10 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def plot_top_cities(data):
-    if not data:
-        print("No data for Top Cities")
-        return
-        
     df = pd.DataFrame(data)
     df['_id'] = df['_id'].fillna('Unknown')
     colors = plt.cm.viridis(np.linspace(0, 1, len(df)))
@@ -20,10 +16,6 @@ def plot_top_cities(data):
     plt.show()
 
 def plot_avg_price_by_property_type(data):
-    if not data:
-        print("No data for Avg Price")
-        return
-
     df = pd.DataFrame(data)
     df['avg_price'] = pd.to_numeric(df['avg_price'].astype(str).str.replace('[$,]', '', regex=True), errors='coerce')
     df = df.dropna(subset=['avg_price']).sort_values('avg_price', ascending=True)
@@ -37,10 +29,6 @@ def plot_avg_price_by_property_type(data):
     plt.show()
 
 def plot_room_type_distribution(data):
-    if not data:
-        print("No data for Room Types")
-        return
-
     df = pd.DataFrame(data)
     colors = plt.cm.Set3(np.linspace(0, 1, len(df)))
 
@@ -52,10 +40,6 @@ def plot_room_type_distribution(data):
     plt.show()
 
 def plot_price_distribution(data):
-    if not data:
-        print("No data for Price Distribution")
-        return
-
     df = pd.DataFrame(data)
     df['price'] = pd.to_numeric(df['price'].astype(str).str.replace('[$,]', '', regex=True), errors='coerce')
     # Filter outliers
